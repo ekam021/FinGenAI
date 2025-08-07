@@ -26,12 +26,7 @@ def retrieve_top_chunks(query: str, file_hash: str) -> list:
             table_text = metadata.get("table_text", "").strip()
             page = metadata.get("page_number", "N/A")
 
-           # print(f"[CHUNK DEBUG] Match {i+1}")
-            #print(f"📄 Page: {page}")
-            #print(f"📊 Score: {match.score:.4f}")
-            #print(f"📄 Text Snippet: {text[:100]}")
-            #print(f"📄 Table Snippet: {table_text[:100]}")
-
+           
             if text or table_text:  # ✅ Only append if useful
                 results.append({
                     "text": text,
